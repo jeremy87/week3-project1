@@ -3,11 +3,32 @@
 // 1. Define a function called "divideByTwo". It should accept one parameter called "number".
 //    The function should divide the number by two and output the answer.
 
+	var divideByTwo = function(number){
+		console.log(number / 2)
+	}
+
+	divideByTwo(37);
+
 // 2. Define a function called "greeting". It should accept two parameters, which will be names.
 //    The function should output the a greeting to both people.
 
+	var greeting = function(name1, name2){
+		console.log("Hello", name1, name2);
+	}
+
+	var name1 = "Jeremy";
+	var name2 = "Pike";
+	greeting(name1, name2);
+
 // 3. You use Amazon Subscribe & Save to have six cans of cashews automatically sent to you each month, but the price keeps changing.
 //    Write a function that takes the price per unit and calculates the total for you each month.
+
+	var cashews = function(unitPrice){
+		console.log("$" + unitPrice * 6);
+	}
+
+	var unitPrice = 3.67;
+	cashews(unitPrice)
 
 // 4. Write a function that accepts the following array and separates the people into two teams.
 //    No names next to eachother in the array should be on the same team.
@@ -25,11 +46,40 @@
 //                  else
 //                      print out a statement saying the number is odd
 
+		var quarter = function(newNumber){
+			console.log(newNumber)
+		}
+
+		if(newNumber % 2 === 0) {
+			console.log("The number is even");
+		} 
+		else {
+			console.log("The number is odd");
+		}
+
+		var number = 5;
+		var newNumber = number / 4;
+		quarter(newNumber);
+
 // 6. Define functions called "area" and "perimeter". They should both accept two parameters and calculate the area and perimeter of a rectangle.
 
 // 7. Write a function called "sleepings", it should accept one parameter, an integer called "hours".
 //    Write a conditional statement inside of the function. If the number of hours is more than 8, print a statement to the console about getting enough rest.
 //    If the number of hours is less than 8, print a statement recommending the user get more shut eye.
+
+	var sleepings = function(hours){
+		console.log(hours)
+	}
+
+	if(hours >= 8) {
+		console.log("You got enough rest!");
+	}
+	else if(hours < 8) {
+		console.log("You need to get more sleep");
+	}
+
+	var hours = 7;
+	sleepings(hours);
 
 // 8. Prompt a user to enter a six digit number. Write a function that reverses the number.
 //    (Hint, you will have to turn the integer into a string before you can reverse it.)
@@ -40,6 +90,17 @@
 // 10. You've finally gotten around to counting the change in your piggy bank. Write a function that accepts four parameters (quarters, dimes, nickels, and pennies).
 //     The function should take each number of coins and multiply it times each coin's value.
 //     Finally, it should return the total amount of change you have in the following format: "$32.77"
+
+	var piggyBank = function(quarters, dimes, nickles, pennies) {
+		var qSum = quarters * .25;
+		var dSum = dimes * .10;
+		var nSum = nickles * .05;
+		var pSum = pennies * .01;
+		var money = (qSum + dSum + nSum + pSum);
+		console.log("$" + money.toFixed(2))
+	}
+
+	piggyBank(3, 8, 12, 43); 
 
 // 11. Develop a function that determines a person's age by prompting them for their birth year.
 
